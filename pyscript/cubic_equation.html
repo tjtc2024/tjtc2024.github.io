@@ -1,0 +1,41 @@
+<head>
+<title>3次関数と直線の交点</title>
+<meta charset="utf-8">
+<!-- PyScriptの読み込み -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" />
+<script type="module" src="https://pyscript.net/releases/2023.11.2/core.js"></script>
+<!-- PyScriptで使うパッケージを指定 --- (*1) -->
+<py-config>
+    packages = ["matplotlib"]
+</py-config>
+</head>
+<body>
+<!-- グラフの描画先を指定 --- (*2) -->
+<div id="mlp" align="center"></div>
+<script type="py">
+    # ライブラリのインポート宣言 --- (*3)
+    from pyscript import display
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+
+    # x軸を設定 --- (*4)
+    x = np.linspace(-3,3,100)
+    
+    fig = plt.figure()
+    # 3次関数をプロット --- (*5)
+    y1 = x**3 - 3*x + 1
+    plt.plot(x,y1,c="r",label="x**3 - 3x + 1")
+    for k in range(0,15,5):
+        # 直線(1次関数)をプロット --- (*6)
+        y2 = 2*x - 4 + k
+        lstr = '2x - ' + str(abs(-4+k)) if -4+k < 0 else '2x + ' + str(-4+k) 
+        plt.plot(x,y2,c="g",label=lstr)
+    plt.plot()
+
+    plt.grid()
+    plt.legend()
+    # グラフのレンダリング --- (*7)
+    display(plt, target="mlp")
+</script>
+</body>

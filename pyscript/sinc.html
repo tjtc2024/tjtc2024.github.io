@@ -1,0 +1,37 @@
+<head>
+<title>sinc関数(sin x / x)</title>
+<meta charset="utf-8">
+<!-- PyScriptの読み込み -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" />
+<script type="module" src="https://pyscript.net/releases/2023.11.2/core.js"></script>
+<!-- PyScriptで使うパッケージを指定 --- (*1) -->
+<py-config>
+    packages = ["matplotlib"]
+</py-config>
+</head>
+<body>
+<!-- グラフの描画先を指定 --- (*2) -->
+<div id="mlp" align="center"></div>
+<script type="py">
+    # ライブラリのインポート宣言 --- (*3)
+    from pyscript import display
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    # sin(x) / x を描画 --- (*4)
+    x = np.linspace(-np.pi/2, np.pi/2, 100)
+    y1 = np.sinc(x)
+    y2 = np.sin(x)
+    y3 = x
+    fig = plt.figure()
+    ax1 = fig.add_subplot(2,1,1)
+    ax2 = fig.add_subplot(2,1,2)
+    ax1.plot(x,y1,c="r",label=r'sin x / x')
+    ax2.plot(x,y2,c="r",label=r'sin x')
+    ax2.plot(x,y3,c="g",label=r'x')
+    ax1.legend()
+    ax2.legend()
+    # グラフのレンダリング --- (*5)
+    display(plt, target="mlp")
+</script>
+</body>
