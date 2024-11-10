@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sql.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.1.0/dist/sql-wasm.js"></script>
+    <script>
+        config = {
+            locateFile: filename => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.1.0/dist/${filename}`
+        }
+    
+        initSqlJs(config).then(function(SQL){
+            var db = new SQL.Database();
+            db.run("CREATE TABLE hello (id, '挨拶');");
+            db.run("INSERT INTO hello VALUES (?,?), (?,?)", [1, 'Good Afternoon', 2, 'Guten Tag']);
+
+            //  準備
+            var stmt = db.prepare("SELECT * FROM hello WHERE id BETWEEN $start AND $end");
+            stmt.getAsObject({$start:1, $end:1});
+
+            //  結束
+            stmt.bind({$start:1, $end:2});
+
+            while(stmt.step()) {
+                var row = stmt.getAsObject();
+                var json = JSON.stringify(row);
+
+                //  ブラウザのコンソールに表示
+                console.log('コンソールにも表示: ' + json);
+
+                //  画面に表示
+                var ele = document.createElement('p');
+                ele.innerHTML = json;
+                document.body.insertBefore(ele, pd);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p id="pd"></p>
+</body>
+</html>

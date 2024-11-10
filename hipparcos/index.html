@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+  <title>恒星名データベース</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+<body>
+  <label>星座名(略号)：<input type="text" size="5" id="keyText"></label>
+  <input type="button" value="検索" id="searchButton">
+  <input type="button" value="全検索" id="searchAllButton">
+  <div id="sql_result"></div>
+  <script src="./hipparcos.js"></script>
+</body>
+</html>
