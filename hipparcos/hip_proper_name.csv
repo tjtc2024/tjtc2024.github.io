@@ -1,14 +1,14 @@
 HIP,NAME,NAME_JA
 677,Alpheratz,アルフェラッツ
-746,Caph,
+746,Caph,カフ
 1067,Algenib,アルゲニブ
 2081,Ankaa
-3179,Shedir
+3179,Shedir,シェダル
 3419,Diphda,ディフダ
 3829,Van Maanen 2
 5447,Mirach,ミラク
 6411,Adhil
-6686,Ruchbah
+6686,Ruchbah,ルクバー
 7588,Achernar,アケルナル
 8645,Baten Kaitos
 8796,Mothallah
@@ -55,7 +55,7 @@ HIP,NAME,NAME_JA
 26311,Alnilam
 26634,Phact
 26727,Alnitak
-27366,Saiph
+27366,Saiph,サイフ
 27628,Wazn
 27989,Betelgeuse,ベテルギウス
 28360,Menkalinan
@@ -123,21 +123,21 @@ HIP,NAME,NAME_JA
 61941,Porrima
 62434,Mimosa
 62956,Alioth
-63125,Cor Caroli
+63125,Cor Caroli,コル・カロリ
 63608,Vindemiatrix
-65378,Mizar
+65378,Mizar,ミザール
 65474,Spica,スピカ
-65477,Alcor
+65477,Alcor,アルコル
 67301,Alkaid
 67927,Muphrid
 68702,Hadar
 68756,Thuban,トゥバン
 68933,Menkent
-69673,Arcturus
+69673,Arcturus,アークトゥルス
 69701,Syrma
 70890,Proxima
 71075,Seginus
-71683,Rigil Kent
+71683,Rigil Kentaurus,リギル・ケンタウルス
 72105,Izar
 72487,Merga
 72607,Kocab,コカブ
@@ -164,16 +164,16 @@ HIP,NAME,NAME_JA
 83608,Alrakis
 84012,Sabik
 84345,Rasalgethi
-85670,Rastaban
+85670,Rastaban,ラスタバン
 85693,Maasym
 85696,Lesath
 85822,Yildun
 85927,Shaula
-86032,Rasalhague
+86032,Rasalhague,ラス・アルハゲ
 86228,Girtab
 86742,Cebalrai
 87585,Grumium
-87833,Etamin
+87833,Eltanin,エルタニン
 87937,Barnard's Star
 88635,Alnasl
 89931,Kaus Media
@@ -188,7 +188,7 @@ HIP,NAME,NAME_JA
 94376,Altais
 95241,Arkab
 95347,Rukbat
-95947,Albireo
+95947,Albireo,アルビレオ
 96295,Campbell's Star
 96757,Sham
 97278,Tarazed
@@ -196,7 +196,7 @@ HIP,NAME,NAME_JA
 98036,Alshain
 100027,Algedi
 100345,Dabih
-100453,Sadr
+100453,Sadr,サドル
 100751,Peacock
 101769,Rotanev
 101958,Sualocin
@@ -204,7 +204,7 @@ HIP,NAME,NAME_JA
 102488,Gienah
 102618,Albali
 104987,Kitalpha
-105199,Alderamin
+105199,Alderamin,アルデラミン
 106032,Alfirk
 106278,Sadalsuud
 106985,Nashira
@@ -214,7 +214,7 @@ HIP,NAME,NAME_JA
 107556,Deneb Algedi
 108917,Kurhah
 109074,Sadalmelik
-109268,Alnair
+109268,Alnair,アルナイル
 109427,Biham
 110003,Ancha
 110395,Sadachbia
@@ -226,6 +226,6 @@ HIP,NAME,NAME_JA
 112748,Sadalbari
 113136,Skat
 113368,Fomalhaut,フォーマルハウト
-113881,Sheat
+113881,Sheat,シェアト
 113963,Markab,マルカブ
 116727,Errai,エライ
