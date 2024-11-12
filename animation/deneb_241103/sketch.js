@@ -8,7 +8,7 @@ function setup() {
   createCanvas(w, h);
   
   slider = createSlider(0, 10, 0);
-  slider.position(500, 100);
+  slider.position(500, 20);
   slider.size(80);
   background(0);
 }
