@@ -12,7 +12,6 @@ async function execSqljs(sql) {
   const db = new SQL.Database(new Uint8Array(buf));
 
   const stmt = db.prepare(sql);
-  //rows = [];
   while( stmt.step() ) {
       let row = stmt.getAsObject();
       rows.push(row);
@@ -26,12 +25,15 @@ async function execSqljs(sql) {
 // 天球マップ
 var gain = 5;
 var w = 360*gain;
-var h = 180*gain;
+var h = 180*gain + 20;;
 var offset = 0;
 
-let inputText;
-let searchButton;
-
+/*
+let inputText = document.getElementById('key');
+let searchButton = document.getElementById('search');
+let offsetButton = document.getElementById('offset');
+let resetButton = document.getAnimations('reset');
+*/
 
 /* 星座名を指定して検索 */
 function searchPressed(){
@@ -43,6 +45,9 @@ function searchPressed(){
 
 function offsetPressed() {
   offset += 30;
+  if (offset >= 360) {
+    offset = offset % 360;
+  }
 }
 
 function resetPressed() {
@@ -52,24 +57,26 @@ function resetPressed() {
 
 // 初期化
 function setup() {
-  createCanvas(w, h);
+  
 
-  inputText = createInput('オリオン');  //
-  inputText.position(75,10);
+  titleP = createP('星座');
 
+  inputText = createInput('オリオン');
+  inputText.position(60,10);
 
-  searchButton = createButton('検索');      // 
+  searchButton = createButton('検索');
   searchButton.mousePressed(searchPressed);  //
-  searchButton.position(250,10);
+  searchButton.position(180,10);
 
   offsetButton = createButton('◀'); //
   offsetButton.mousePressed(offsetPressed);
-  offsetButton.position(300,10);
+  offsetButton.position(230,10);
 
   resetButton = createButton('リセット'); //
   resetButton.mousePressed(resetPressed);
-  resetButton.position(350,10);
+  resetButton.position(260,10);
 
+  createCanvas(w, h);
   background(0);
 }
 
@@ -112,8 +119,11 @@ function getVmagLevel(vmag) {
 function plotrow(row) {
   const vlevel = getVmagLevel(parseFloat(row.VMAG));
   const ra_value = (parseInt(row.RA_DEG) + offset) % 360; 
-  const ra_deg = w - parseInt(ra_value)*gain;
-  const dec_deg = h/2 - parseInt(row.DEC_DEG)*gain;
+  const dec_deg = (90 - parseInt(row.DEC_DEG))*gain + 10;
+  const dec_rad = parseFloat(row.DEC_DEG)*Math.PI / 180.0;
+  const ra_deg = ((180 - ra_value)* Math.cos(dec_rad) +180)*gain
+  //const dec_rad = (parseInt(row.DEC_DEG))*Math.PI / 180.0;
+  //const ra_pos = (ra_deg * Math.cos(dec_rad) + 180)*gain;
 
   if (0 <= ra_deg && ra_deg <= w && 0 <= dec_deg && dec_deg <= h) {
     fill(vlevel[0]);
@@ -127,4 +137,4 @@ function draw() {
   rows_out.forEach( row => { plotrow(row); });
 }
 
-new p5(sketch, "container");
+//new p5(sketch, "container");
