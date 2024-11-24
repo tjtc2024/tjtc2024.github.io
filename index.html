@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>豊明ジュニア天文クラブ トップページ</title>
+    <title>TJTC 豊明ジュニア天文クラブ トップページ</title>
     <style>
         body {
             background-color: #000000;
@@ -13,24 +13,30 @@
             aspect-ratio: 9 / 16;
         }
         img {
+            position: absolute;
+            opacity: 0;
+            transition: all 2s ease;
             width:50vw;
             height:auto;
+        }
+        img.active {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <h1>1. 豊明ジュニア天文クラブとは</h1>
-    豊明市内の小中学生を対象に天文に関する活動をする、<br>
-    愛知県豊明市の文科系ジュニアクラブ(CJC)のひとつです。
-    <h1>2. 豊明ジュニア天文クラブの活動方針</h1>
-    毎月第2, 第4土曜日に豊明市内の小中学生を対象に活動しています。<br>
-    <h2>2-1. 宇宙空間の仕組み</h2>
-    エネルギーと場の理論
-    <h2>2-2. 宇宙空間の観測</h2>
-    望遠鏡の使い方
-    <h2>2-3. プラネタリウム</h2>
-    <h2>2-4. 発表・展示</h2>
-    <h2>2-5. デジタル観望</h2>
-    <h3>2-5-1. オンライン観望会</h3>
-    <h2>2-6. シミュレーション</h2>
+    <h1>TJTC : 豊明ジュニア天文クラブ</h1>
+    愛知県豊明市の小中学生対象の文科系ジュニアクラブ(CJC)です。<br>
+    毎月隔週土曜日に活動しています。
+    <h2>2-1. 天体観測</h2>
+    望遠鏡を使った観測, 天体の撮影を紹介します。
+    <h2>2-2. プラネタリウムコンサート</h2>
+    豊明市立豊明中学校にあったプラネタリウム投影機を使って夜空の星たちを紹介します。
+    <h2>2-3. 天文情報</h2>
+    コンピューターを正しく使って、星たちを知る方法を紹介します。<br>
+    <a href="mailto:tjtc2024@gmail.com?subject=お問い合わせ">お問い合わせはこちらから</a><br>
+    <img src="img/ori.jpg" class="active">
+    <img src="img/sco.jpg">
+    <img src="img/cyg.jpg">
+    <script src="autochange.js"></script>
 </body>
