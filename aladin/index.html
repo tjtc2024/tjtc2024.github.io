@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Aladin Lite v3 example</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="reqtext" size="10" value="M31">
+    <input type="button" value="表示" onclick="clickBtnSel()" />
+    <hr>
+    <div id='aladin-lite-div' style='width: 500px; height: 500px;'></div>
+    <script src='https://aladin.cds.unistra.fr/AladinLite/api/v3/latest/aladin.js' charset='utf-8'></script>
+    <script src="./main.js"></script>
+</body>
