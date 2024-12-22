@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>天体画像検索</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+        img {
+            width:50vw;
+            height:auto;
+        }
+        canvas {
+            width:50vw;
+            height:1vw;          
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+</head>
+<body>
+    <h1>天文用語検索</h1>
+    <p>天文用語を入れて検索します(作成中)。</p>
+    <label>星座名<input type="text" size="20" id="keyText"></label>
+    <input type="button" value="検索" id="searchButton"><br>
+    <a href="../../information.html">戻る</a><br>
+    <div id="sql_result"></div><br>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
