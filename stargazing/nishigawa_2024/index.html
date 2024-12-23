@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TJTC 豊明ジュニア天文クラブ オンライン観望会</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+        img {
+            position: absolute;
+            opacity: 0;
+            transition: all 2s ease;
+            width:50vw;
+            height:auto;
+        }
+        img.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>西川公園の夜空</h1>
+    2024年11月ごろ撮影した西川公園の夜空です<br>
+    再生ボタンを押すとスライドが流れ始めます<br>
+    <a href="../index.html">戻る</a>
+    <hr>
+    <button type="button" id="play">再生</button><button type="button" id="stop">停止</button><br>
+    <img src="001.jpg" class="active">
+    <img src="002.jpg">
+    <img src="003.jpg">
+    <img src="004.jpg">
+    <img src="005.jpg">
+    <img src="006.jpg">
+    <img src="007.jpg">
+    <img src="008.jpg">
+    <img src="009.jpg">
+    <img src="010.jpg">
+    <script src="slide.js"></script>
+    <br>
+    
+</body>
+</html>
