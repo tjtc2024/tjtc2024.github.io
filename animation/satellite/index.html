@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>相対運動:地球から見た太陽系の動き</title>
+        <style>
+            body {
+                background-color: #000000;
+            }
+            .aspect-ratio-block {
+                background: #000000;
+                color: #ffffff;
+                width: 100%;
+                aspect-ratio: 9 / 16;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="aspect-ratio-block">
+            <input type="text" id="horizen" value="1.0"/>
+            <input type="text" id="satellite" value="10.0"/>
+            <br>
+            <input type="button" value="開始/停止" onclick="run()" />
+            <input type="button" value="リセット" onclick="reset()" />
+            <br>
+            <label><input type="radio" name="motion" value="絶対角速度" checked/>絶対角速度</label>
+            <label><input type="radio" name="motion" value="相対角速度" />相対角速度</label>
+            <br>
+            <canvas id="main" width="500" height="500"></canvas>
+            <script src="./main.js"></script>
+        </div>
+    </body>
+</html>
