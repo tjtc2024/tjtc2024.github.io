@@ -37,7 +37,7 @@ box.addEventListener('keydown', e => {
         box.value = null;
         if (p_value >= 2) {
             input.textContent = String(p_value);
-            result.textContent = divisors.map(divisor => (divisor.npow === 1) ? `${divisor.number}` : `${divisor.number}^${divisor.npow}`).join('✖️');
+            result.textContent = divisors.map(divisor => (divisor.npow === 1) ? `${divisor.number}` : `${divisor.number}^${divisor.npow}`).join('×');
         }
         else {
             input.textContent = null;
