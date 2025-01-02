@@ -1,5 +1,5 @@
 
-let threshold = 200;
+let threshold = 180;
 let imgElement = document.getElementById('imageSrc');
 
 // 描画
@@ -32,7 +32,7 @@ upGainElement.addEventListener('click', () => {
 
 const resetElement = document.getElementById('reset');
 resetElement.addEventListener('click', () => {
-  threshold = 200;
+  threshold = 180;
   paint();
 });
 
