@@ -44,7 +44,7 @@ sec_all.appendExpr("夕方の西の空に見える1等星はフォーマルハ�
 sec_all.appendExpr("夕方の東の空には木星と冬の星座の1等星がよく見えます。");
 sects.push(sec_all);
 
-let sec_ven_1 = new Section("1. 夕方の北西：金星・土星・フォーマルハウト", "../imgs/20250101/venus_01.jpg");
+let sec_ven_1 = new Section("1-1. 夕方の北西：金星・土星・フォーマルハウト", "../imgs/20250101/venus_01.jpg");
 sec_ven_1.appendExpr("夕方の西の空には宵(よい)の明星：金星が見えます。");
 sec_ven_1.appendExpr("金星の近くには土星と秋の一つ星=フォーマルハウトがあります。");
 sects.push(sec_ven_1);
@@ -54,11 +54,17 @@ sec_ven_2.appendExpr("夕方の西の空には宵(よい)の明星：金星が�
 sec_ven_2.appendExpr("金星の近くには土星と秋の一つ星=フォーマルハウトがあります。");
 sects.push(sec_ven_2);
 
-let sec_cyg_1 = new Section("2. 夕方の北東：冬なのに夏の大三角", "../imgs/20250101/cyg_01.jpg");
+let sec_cyg_1 = new Section("2-1. 夕方の北東：冬なのに夏の大三角", "../imgs/20250101/cyg_01.jpg");
 sec_cyg_1.appendExpr("北東の地平線上には夏の大三角(デネブ・ベガ・アルタイル)があります。");
 sec_cyg_1.appendExpr("写真は1月1日に西川公園で撮影したものです。");
 sec_cyg_1.appendExpr("西川公園からは1月12日, 1月18日ごろにはデネブだけがわずかに見えます。");
 sects.push(sec_cyg_1);
+
+let sec_cyg_2 = new Section("2-2. 夕方の北東：冬なのに夏の大三角", "../imgs/20250101/cyg_01_guide.jpg");
+sec_cyg_2.appendExpr("北東の地平線上には夏の大三角(デネブ・ベガ・アルタイル)があります。");
+sec_cyg_2.appendExpr("写真は1月1日に西川公園で撮影したものです。");
+sec_cyg_2.appendExpr("西川公園からは1月12日, 1月18日ごろにはデネブだけがわずかに見えます。");
+sects.push(sec_cyg_2);
 
 let sec_cyg_3 = new Section("3. 夕方の北東：北十字", "../imgs/20250110/cyg_guide.jpg");
 sec_cyg_3.appendExpr("地平線付近の白鳥座は北の空の十字架に見えます。");
@@ -111,11 +117,18 @@ sec_tel.appendExpr("木星の衛星の発見は文明の発展に非常に大き
 sec_tel.appendExpr("たとえば、人工衛星による地上観測はこの発見なしにはありえないはずです。");
 sects.push(sec_tel);
 
-let sec_ori_1 = new Section("8. 夕方東の空：オリオン座とシリウス", "../imgs/20250110/ori.jpg");
+let sec_ori_1 = new Section("8-1. 夕方東の空：オリオン座とシリウス", "../imgs/20250110/ori.jpg");
 sec_ori_1.appendExpr("東の地平線上にはオリオン座が昇ってきます。");
 sec_ori_1.appendExpr("おおいぬ座のシリウスも昇ってきます。");
 sec_ori_1.appendExpr("シリウスは星座をつくっている星たちの中で最も明るい星です。");
 sects.push(sec_ori_1);
+
+let sec_ori_2 = new Section("8-2. 夕方東の空：オリオン座とシリウス", "../imgs/20250110/ori_guide.jpg");
+sec_ori_2.appendExpr("東の地平線上にはオリオン座が昇ってきます。");
+sec_ori_2.appendExpr("おおいぬ座のシリウスも昇ってきます。");
+sec_ori_2.appendExpr("シリウスは星座をつくっている星たちの中で最も明るい星です。");
+sects.push(sec_ori_2);
+
 
 let sec_mars_1 = new Section("9-1. 真夜中東の空：冬の大三角と火星", "../imgs/20250101/mars.jpg");
 sec_mars_1.appendExpr("夜中になるにつれて冬の大三角(ベテルギウス,シリウス,プロキオン)も昇ってきます。");
@@ -134,29 +147,43 @@ sec_mars_2.appendExpr("プロキオンはこいぬ座の1等星");
 sec_mars_2.appendExpr("この時期は、火星が冬の大三角付近に見えます。");
 sects.push(sec_mars_2);
 
-let sec_uma_1 = new Section("10. 深夜東の空：北斗七星","../imgs/20250101/uma_guide.jpg");
+let sec_uma_1 = new Section("10-1. 深夜東の空：北斗七星","../imgs/20250101/uma.jpg");
 sec_uma_1.appendExpr("明け方に北東の空から昇るおおぐま座です。");
 sec_uma_1.appendExpr("おおぐま座のしっぽの部分はひしゃくに似ています。");
 sec_uma_1.appendExpr("北斗七星と呼ばれています");
 sects.push(sec_uma_1);
 
-let sec_uma_2 = new Section("10. 深夜東の空：北斗七星","../imgs/20250101/uma_guide.jpg");
+let sec_uma_2 = new Section("10-2. 深夜東の空：北斗七星","../imgs/20250101/uma_guide.jpg");
 sec_uma_2.appendExpr("明け方に北東の空から昇るおおぐま座です。");
 sec_uma_2.appendExpr("おおぐま座のしっぽの部分はひしゃくに似ています。");
 sec_uma_2.appendExpr("北斗七星と呼ばれています");
 sects.push(sec_uma_2);
 
-let sec_leo = new Section("11. 深夜東の空：しし座, うみへび座","../imgs/20250101/leo_guide.jpg");
-sec_leo.appendExpr("明け方に南東の空から昇るしし座とうみへび座です。");
-sec_leo.appendExpr("しし座の頭の部分は ? を逆にしたようなかたちでししの大鎌と呼ばれています");
-sects.push(sec_leo);
+let sec_leo_1 = new Section("11-1. 深夜東の空：しし座, うみへび座","../imgs/20250101/leo.jpg");
+sec_leo_1.appendExpr("明け方に南東の空から昇るしし座とうみへび座です。");
+sec_leo_1.appendExpr("しし座の頭の部分は ? を逆にしたようなかたちでししの大鎌と呼ばれています");
+sects.push(sec_leo_1);
 
-let sec_vir = new Section("12. 深夜東の空：春の大三角","../imgs/20250101/vir_guide.jpg");
-sec_vir.appendExpr("明け方に東の空から昇る春の大三角の星(アルクトゥルス, スピカ, デネボラ)たちです。");
-sec_vir.appendExpr("アルクトゥルスはうしかい座の1等星");
-sec_vir.appendExpr("スピカはおとめ座の1等星");
-sec_vir.appendExpr("デネボラはしし座の2等星");
-sects.push(sec_vir);
+let sec_leo_2 = new Section("11-2. 深夜東の空：しし座, うみへび座","../imgs/20250101/leo_guide.jpg");
+sec_leo_2.appendExpr("明け方に南東の空から昇るしし座とうみへび座です。");
+sec_leo_2.appendExpr("しし座の頭の部分は ? を逆にしたようなかたちでししの大鎌と呼ばれています");
+sects.push(sec_leo_2);
+
+let sec_vir_1 = new Section("12-1. 深夜東の空：春の大三角","../imgs/20250101/vir_guide.jpg");
+sec_vir_1.appendExpr("明け方に東の空から昇る春の大三角の星(アルクトゥルス, スピカ, デネボラ)たちです。");
+sec_vir_1.appendExpr("アルクトゥルスはうしかい座の1等星");
+sec_vir_1.appendExpr("スピカはおとめ座の1等星");
+sec_vir_1.appendExpr("デネボラはしし座の2等星");
+sects.push(sec_vir_1);
+
+
+let sec_vir_2 = new Section("12-2. 深夜東の空：春の大三角","../imgs/20250101/vir_guide.jpg");
+sec_vir_2.appendExpr("明け方に東の空から昇る春の大三角の星(アルクトゥルス, スピカ, デネボラ)たちです。");
+sec_vir_2.appendExpr("アルクトゥルスはうしかい座の1等星");
+sec_vir_2.appendExpr("スピカはおとめ座の1等星");
+sec_vir_2.appendExpr("デネボラはしし座の2等星");
+sects.push(sec_vir_2);
+
 
 
 /**
