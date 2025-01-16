@@ -204,7 +204,7 @@ const nextPage = () => {
 const prevPage = () => {
   const slide = document.getElementById("slide");
   idx--;
-  if (idx <= 0) {
+  if (idx < 0) {
     idx = msgs.length-1;
   }
   slide.innerHTML = msgs[idx];
