@@ -72,6 +72,10 @@ let sec_win_2 = new Section("4-2. 冬の大三角", "./imgs/win_2.jpg");
 sec_win_2.appendExpr("西の空に見えた冬の大三角(ベテルギウス,シリウス,プロキオン)");
 sects.push(sec_win_2);
 
+let sec_win_3 = new Section("4-3. くもりはじめる西の空", "./imgs/win.mp4");
+sec_win_3.appendExpr("AM 3:00 少し前に西の空から徐々にくもりはめました。");
+sects.push(sec_win_3);
+
 let sec_last = new Section("5. 曇ってきた北の空","./imgs/last.mp4");
 sec_last.appendExpr("AM 3:00 を過ぎると北の空も空一面雲におおわれてしまいました。");
 sects.push(sec_last);
@@ -95,7 +99,7 @@ const nextPage = () => {
 const prevPage = () => {
   const slide = document.getElementById("slide");
   idx--;
-  if (idx <= 0) {
+  if (idx < 0) {
     idx = msgs.length-1;
   }
   slide.innerHTML = msgs[idx];
