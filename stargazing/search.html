@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>豊明ジュニア天文クラブ オンライン観望会</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+        img {
+            width:50vw;
+            height:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>オンライン観望会データベース</h1>
+    <p>星座名を入れて検索します。</p>
+    <label>検索したい星座名<input type="text" size="20" id="keyText"></label>
+    <input type="button" value="検索" id="searchButton"><br>
+    <div id="sql_result">
+        <p>ここに画像が表示されます。</p>
+    </div>
+    <br>
+    <hr>
+    <a href="../information.html">戻る</a>
+</body>
