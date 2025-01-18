@@ -48,13 +48,17 @@ sec_fir.appendExpr("曇った北の空がお出迎え");
 sec_fir.appendExpr("こうなることも少なくないので、当クラブでは出発前にGPV気象予報の雲量を確認します");
 sects.push(sec_fir);
 
-let sec_qua_1 = new Section("2-1. しぶんぎ座流星群", "./imgs/qua.mp4");
+let sec_qua_1 = new Section("2-1. しぶんぎ座流星群(動画)", "./imgs/qua.mp4");
 sec_qua_1.appendExpr("流れ星をさがしてみましょう。");
 sects.push(sec_qua_1);
 
 let sec_qua_2 = new Section("2-2. しぶんぎ座流星群", "./imgs/qua.jpg");
 sec_qua_2.appendExpr("流れ星はこちらです。");
 sects.push(sec_qua_2);
+
+let sec_qua_3 = new Section("2-3. しぶんぎ座流星群", "./imgs/qua2.jpg");
+sec_qua_3.appendExpr("左上の線が流れ星です。");
+sects.push(sec_qua_3);
 
 let sec_spr_1 = new Section("3-1. 春の大三角", "./imgs/spr_1.jpg");
 sec_spr_1.appendExpr("近くに見えた春の大三角(アルクトゥルス,スピカ,デネボラ)");
