@@ -42,16 +42,24 @@ const keyText = document.getElementById('keyText');
 keyText.addEventListener('change', () => {
     let keyStr = keyText.value;
     document.querySelector("#sql_result").innerHTML = "検索開始";
-    //let sql = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "\';";
-    
-    //execSqljs(sql);
-
     const sqls = [];
-    const sql1 = "SELECT * FROM IAU WHERE TITLE ='" + keyStr + "';";
-    const sql2 = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "';";
-    sqls.push(sql1,sql2);
+    if (keyStr.endsWith("座")) {
+        const sql1 = "SELECT * FROM IAU WHERE TITLE ='" + keyStr + "';";
+        const sql2 = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "';";
+        sqls.push(sql1,sql2);
 
-    document.querySelector("#sql_result").innerHTML = "SQL生成";
-    execSqlsJs(sqls);
+        document.querySelector("#sql_result").innerHTML = "SQL生成";
+        execSqlsJs(sqls);
+    }
+    else if (keyStr.endsWith("流星群")) {
+        const sql1 = "SELECT * FROM METEOR WHERE TITLE ='" + keyStr + "';";
+        sqls.push(sql1);
+
+        document.querySelector("#sql_result").innerHTML = "SQL生成";
+        execSqlsJs(sqls);
+    }
+    else {
+
+    }
     keyText.value ='';
 });
