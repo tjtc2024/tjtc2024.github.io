@@ -58,8 +58,12 @@ keyText.addEventListener('change', () => {
         document.querySelector("#sql_result").innerHTML = "SQL生成";
         execSqlsJs(sqls);
     }
-    else {
+    else if (keyStr.endsWith("大三角")) {
+        const sql1 = "SELECT * FROM ASTERISM WHERE TITLE ='" + keyStr + "';";
+        sqls.push(sql1);
 
+        document.querySelector("#sql_result").innerHTML = "SQL生成";
+        execSqlsJs(sqls);
     }
     keyText.value ='';
 });
