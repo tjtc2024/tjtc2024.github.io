@@ -1,6 +1,7 @@
 
+
 /* SQL */
-async function execSqljs(sql) {
+async function execSqlsJs(sqls) {
     const sqlPromise = initSqlJs({
         locateFile:file=>`./lib/${file}`
     });
@@ -11,32 +12,46 @@ async function execSqljs(sql) {
     const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
     const db = new SQL.Database(new Uint8Array(buf));
   
-    document.querySelector("#sql_result").innerHTML = "SQL実行";
+    
 
-    const stmt = db.prepare(sql);
     let sql_result = "";
-    while( stmt.step() ) {
-        let row = stmt.getAsObject();
-        sql_result += "<h2>" + row.TITLE + "</h2>";
-        sql_result += "<p><img src=\"" + row.IMGPATH + "\"></p>";
-    }
+
+    
+    sqls.forEach(sql => {
+        const stmt = db.prepare(sql);
+        while( stmt.step() ) {
+            let row = stmt.getAsObject();
+            sql_result += "<h2>" + row.TITLE + "</h2>";
+            sql_result += "<p><img src=\"" + row.IMGPATH + "\"></p>";
+        }
+        stmt.free();
+    });
     document.querySelector("#sql_result").innerHTML = sql_result;
 
-    stmt.free();
     db.close();
 }
 
 
+
+
 /* ボタン */
-let keyText = document.getElementById('keyText');
-let searchButton = document.getElementById('searchButton');
-  
+const keyText = document.getElementById('keyText');
+
+
 /* タイトルを指定して検索 */
-function butotnClick() {
+keyText.addEventListener('change', () => {
     let keyStr = keyText.value;
-    let sql = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "\';";
-    execSqljs(sql);
-}
-  
-/* イベント登録 */
-searchButton.addEventListener('click', butotnClick);
+    document.querySelector("#sql_result").innerHTML = "検索開始";
+    //let sql = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "\';";
+    
+    //execSqljs(sql);
+
+    const sqls = [];
+    const sql1 = "SELECT * FROM IAU WHERE TITLE ='" + keyStr + "';";
+    const sql2 = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "';";
+    sqls.push(sql1,sql2);
+
+    document.querySelector("#sql_result").innerHTML = "SQL生成";
+    execSqlsJs(sqls);
+    keyText.value ='';
+});
