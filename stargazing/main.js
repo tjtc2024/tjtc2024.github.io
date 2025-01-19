@@ -2,7 +2,7 @@
 /* SQL */
 async function execSqljs(sql) {
     const sqlPromise = initSqlJs({
-        locateFile:file=>`https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/${file}`
+        locateFile:file=>`./lib/${file}`
     });
     
     document.querySelector("#sql_result").innerHTML = "データベースにアクセス";
@@ -33,7 +33,8 @@ let searchButton = document.getElementById('searchButton');
   
 /* タイトルを指定して検索 */
 function butotnClick() {
-    let sql = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyText.value + "\';";
+    let keyStr = keyText.value;
+    let sql = "SELECT * FROM CONSTELLATION WHERE TITLE ='" + keyStr + "\';";
     execSqljs(sql);
 }
   
