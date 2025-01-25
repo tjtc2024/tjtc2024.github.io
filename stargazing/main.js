@@ -21,7 +21,11 @@ async function execSqlsJs(sqls) {
         const stmt = db.prepare(sql);
         while( stmt.step() ) {
             let row = stmt.getAsObject();
-            sql_result += "<h2>" + row.TITLE + "</h2>";
+            let title = row.TITLE;
+            if (row.LOCATION) {
+                title += "(" + row.LOCATION + ")";
+            }
+            sql_result += "<h2>" + title + "</h2>";
             sql_result += "<p><img src=\"" + row.IMGPATH + "\"></p>";
         }
         stmt.free();
