@@ -20,7 +20,7 @@ const loadHtml = (jsonObj) => {
         const lines = sections[n].lines
         //htmlBody += "<p>" + sections[n].lines[0].line + "</p>";
         for (let m = 0; m < lines.length; m++) {
-            htmlBody += "<p>" + lines[m].line + "</p>";
+            htmlBody += "<p>" + lines[m] + "</p>";
         }
     }
     div.innerHTML = htmlBody;

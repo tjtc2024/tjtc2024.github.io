@@ -14,14 +14,8 @@
             aspect-ratio: 9 / 16;
         }
         img {
-            position: absolute;
-            opacity: 0;
-            transition: all 2s ease;
             width:50vw;
             height:auto;
-        }
-        img.active {
-            opacity: 1;
         }
     </style>
 </head>
@@ -36,11 +30,11 @@
     　豊明市立豊明中学校にあったプラネタリウム投影機の上映<br>
     <a href="./information.html">天文情報</a><br>
     　コンピューター, インターネットを使った天体の紹介<br>
-    <a href="mailto:tjtc2024@gmail.com?subject=お問い合わせ">お問い合わせはこちらから</a><br>
-    <img src="img/ori.jpg" class="active">
-    <img src="img/sco.jpg">
-    <img src="img/cyg.jpg">
-    <img src="img/cas_and.jpg">
-    <script src="autochange.js"></script>
+    <hr>
+    <h2>星空ギャラリー</h2>
+    <div id="slide"></div>
+    <script src="./autochange.js"></script>
+    <hr>
+    <a href="mailto:tjtc2024@gmail.com?subject=お問い合わせ">お問い合わせはこちらから</a>
 </body>
 </html>
