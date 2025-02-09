@@ -6,11 +6,6 @@ const loadHtml = (jsonObj) => {
     let htmlBody = "<h2>" + jsonObj.title + "</h2>";
     //htmlBody += JSON.stringify(jsonObj.sections);
     const sections = jsonObj.sections;
-    //htmlBody += JSON.stringify(sections[0]);
-    //htmlBody += JSON.stringify(sections[0].lines);
-
-    //htmlBody += JSON.stringify(sections[0].lines[0].line);
-    //htmlBody += "<p>" + sections[0].lines[0].line + "</p>";
 
     for (let n = 0; n < sections.length; n++) {
         if (sections[n].img) {
