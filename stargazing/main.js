@@ -62,7 +62,7 @@ keyText.addEventListener('change', () => {
         document.querySelector("#sql_result").innerHTML = "SQL生成";
         execSqlsJs(sqls);
     }
-    else if (keyStr.endsWith("大三角")) {
+    else if (keyStr.endsWith("大三角") || keyStr == "秋の大四辺形") {
         const sql1 = "SELECT * FROM ASTERISM WHERE TITLE ='" + keyStr + "';";
         sqls.push(sql1);
 
