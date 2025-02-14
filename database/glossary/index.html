@@ -22,13 +22,17 @@
             height:1vw;          
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+    <script src="../lib/sql-wasm.js"></script>
 </head>
 <body>
     <h1>天文用語検索</h1>
     <p>天文用語を入れて検索します(作成中)。</p>
-    <label>用語<input type="text" size="20" id="keyText"></label>
-    <input type="button" value="検索" id="searchButton"><br>
+    <label>天文用語を入れてください<input type="text" size="20" id="keyText"></label>
+    <div id="sql_result">
+        <p>ここに説明が表示されます。</p>
+    </div>
+    <script src="./main.js"></script>
+    <hr>
     <a href="../../information.html">戻る</a><br>
     <div id="sql_result"></div>
 </body>

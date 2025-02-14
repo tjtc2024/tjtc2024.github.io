@@ -62,8 +62,15 @@ keyText.addEventListener('change', () => {
         document.querySelector("#sql_result").innerHTML = "SQL生成";
         execSqlsJs(sqls);
     }
-    else if (keyStr.endsWith("大三角") || keyStr == "秋の大四辺形") {
+    else if (keyStr.startsWith("春の") || keyStr.startsWith("夏の")  || keyStr.startsWith("秋の")  || keyStr.startsWith("冬の")) {
         const sql1 = "SELECT * FROM ASTERISM WHERE TITLE ='" + keyStr + "';";
+        sqls.push(sql1);
+
+        document.querySelector("#sql_result").innerHTML = "SQL生成";
+        execSqlsJs(sqls);
+    }
+    else if (keyStr == "金星" || keyStr == "木星" || keyStr == "火星" || keyStr == "土星") {
+        const sql1 = "SELECT * FROM PLANET WHERE TITLE ='" + keyStr + "';";
         sqls.push(sql1);
 
         document.querySelector("#sql_result").innerHTML = "SQL生成";
