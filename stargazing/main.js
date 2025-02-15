@@ -76,5 +76,12 @@ keyText.addEventListener('change', () => {
         document.querySelector("#sql_result").innerHTML = "SQL生成";
         execSqlsJs(sqls);
     }
+    else {
+        const sql1 = "SELECT * FROM PICKUP WHERE TITLE ='" + keyStr + "';";
+        sqls.push(sql1);
+
+        document.querySelector("#sql_result").innerHTML = "SQL生成";
+        execSqlsJs(sqls);
+    }
     keyText.value ='';
 });
