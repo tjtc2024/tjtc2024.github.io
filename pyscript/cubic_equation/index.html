@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>3次関数と直線の交点</title>
+<meta charset="utf-8">
+<!-- PyScriptの読み込み -->
+<link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" />
+<script type="module" src="https://pyscript.net/releases/2023.11.2/core.js"></script>
+<!-- PyScriptで使うパッケージを指定 --- (*1) -->
+<py-config>
+    packages = ["matplotlib"]
+    [[fetch]]
+    files = ["./cubic_equation.py"]
+</py-config>
+</head>
+<body>
+<h2>3次関数と直線の交点</h2>
+<p>グラフのロードに少し時間がかかります。</p>
+<!-- グラフの描画先を指定 --- (*2) -->
+<div id="mlp" align="center"></div>
+<py-script src="./cubic_equation.py"></py-script>
+</body>
+</html>

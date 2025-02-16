@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>OpenCV.jsによる明るい星探し</title>
+<title>OpenCV.jsによるコントラスト補正</title>
 <style>
     body {
         background-color: #000000;
@@ -22,13 +22,15 @@
 <script async src="../4.10.0/opencv.js" type="text/javascript"></script>
 </head>
 <body>
-<h2>明るい星だけ残します</h2>
-<img src="../img/cyg.jpg" id="imageSrc">
+<h2>コントラスト修正</h2>
+<img src="../img/diamond_gs1.jpg" id="imageSrc">
 <div class="inputoutput">
     <div class="caption">画像処理結果</div>
     <canvas id="canvasOutput" ></canvas>
 </div>
-<button id="down">▼</button><button id="up">▲</button><button id="reset">■</button>
+ゲイン<button id="downGain">▼</button><button id="upGain">▲</button>
+オフセット<button id="downOffset">▼</button><button id="upOffset">▲</button><br>
+デフォルト<button id="reset">リセット</button>
 <p id="status">OpenCV.js is loading...</p>
 <script src="./main.js" type="text/javascript"></script>
 

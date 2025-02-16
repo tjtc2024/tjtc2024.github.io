@@ -1,5 +1,5 @@
 
-let threshold = 180;
+let threshold = 150;
 let imgElement = document.getElementById('imageSrc');
 
 // 描画
