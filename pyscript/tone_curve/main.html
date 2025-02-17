@@ -10,14 +10,16 @@
 <py-config>
     packages = ["pillow", "numpy", "matplotlib"]
     [[fetch]]
-    files = ["./main.py", "./diamond_gs1.jpg"]
+    files = ["./main.py", "../imgs/diamond_gs1.jpg"]
 </py-config>
 </head>
 <body>
-<h2>Pillow 画像処理</h2>
-<p>画像ロードに少し時間がかかります。</p>
+<h2>トーンカーブ補正</h2>
+<p>画像ロードに非常に時間がかかります。</p>
 <!-- グラフの描画先を指定 --- (*2) -->
 <div id="mlp" align="center"></div>
 <py-script src="./main.py"></py-script>
+<hr>
+<a href="./main.html">戻る</a><br>
 </body>
 </html>

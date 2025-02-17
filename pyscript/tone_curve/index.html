@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>3次関数グラフの接線</title>
+<title>冬のダイヤモンド(Pillow)</title>
 <meta charset="utf-8">
 <!-- PyScriptの読み込み -->
 <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.2/core.css" />
 <script type="module" src="https://pyscript.net/releases/2023.11.2/core.js"></script>
 <!-- PyScriptで使うパッケージを指定 --- (*1) -->
 <py-config>
-    packages = ["matplotlib"]
+    packages = ["pillow", "numpy", "matplotlib"]
     [[fetch]]
-    files = ["./cube.py"]
+    files = ["./main.py", "../imgs/diamond_gs1.jpg"]
 </py-config>
 </head>
 <body>
-<!-- グラフの描画先を指定 --- (*2) -->
-<div id="mlp" align="center"></div>
-<py-script src="./cube.py"></py-script>
+<h2>Pillow 画像処理</h2>
+<p>トーンカーブ補正</p>
+<p><img src="./diamond.png"></p>
+<a href="./main.html">トーンカーブ補正(処理が非常に遅いです)</a>
 <hr>
 <a href="../../information.html">戻る</a>
 </body>
