@@ -1,5 +1,5 @@
 
-let threshold = 145;
+let threshold = 120;
 let imgElement = document.getElementById('imageSrc');
 
 
@@ -28,7 +28,7 @@ function paint() {
 // ボタンイベント
 const downGainElement = document.getElementById('down');
 downGainElement.addEventListener('click', () => {
-  threshold = (threshold > 128) ? threshold-1 : 128;
+  threshold = (threshold > 110) ? threshold-1 : 110;
   paint();
 });
 
@@ -40,7 +40,7 @@ upGainElement.addEventListener('click', () => {
 
 const resetElement = document.getElementById('reset');
 resetElement.addEventListener('click', () => {
-  threshold = 145;
+  threshold = 120;
   paint();
 });
 
