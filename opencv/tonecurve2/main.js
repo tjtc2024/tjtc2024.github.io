@@ -1,5 +1,5 @@
 
-let threshold = 120;
+let threshold = 128;
 let imgElement = document.getElementById('imageSrc');
 
 
@@ -13,7 +13,7 @@ function paint() {
   for (let y = 0; y < src.rows; y++) {
     for (let x = 0; x < src.cols; x++) {
       let c = dst.data[y * src.cols + x];
-      dst.data[y * src.cols + x] = (c > threshold) ? Math.trunc(255 * (c - threshold) / (255 - threshold)) : 0;
+      dst.data[y * src.cols + x] = (c > threshold) ? Math.min(Math.trunc(1024 * (c - threshold) / (255 - threshold)), 255) : 0;
     }
   }
 
@@ -28,7 +28,7 @@ function paint() {
 // ボタンイベント
 const downGainElement = document.getElementById('down');
 downGainElement.addEventListener('click', () => {
-  threshold = (threshold > 110) ? threshold-1 : 110;
+  threshold = (threshold > 64) ? threshold-1 : 64;
   paint();
 });
 
@@ -40,7 +40,7 @@ upGainElement.addEventListener('click', () => {
 
 const resetElement = document.getElementById('reset');
 resetElement.addEventListener('click', () => {
-  threshold = 120;
+  threshold = 128;
   paint();
 });
 

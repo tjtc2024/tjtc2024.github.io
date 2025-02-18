@@ -13,7 +13,7 @@ function paint() {
   for (let y = 0; y < src.rows; y++) {
     for (let x = 0; x < src.cols; x++) {
       let c = dst.data[y * src.cols + x];
-      dst.data[y * src.cols + x] = (c > threshold) ? Math.trunc(255 * (c - threshold) / (255 - threshold)) : 0;
+      dst.data[y * src.cols + x] = (c > threshold) ? Math.min(Math.trunc(512 * (c - threshold) / (255 - threshold)),255) : 0;
     }
   }
 
