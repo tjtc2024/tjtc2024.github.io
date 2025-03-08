@@ -1,5 +1,5 @@
 
-let threshold = 145;
+
 let imgElement = document.getElementById('imageSrc');
 
 let pos = 0;
@@ -8,7 +8,7 @@ let thrs = Array(145,145,145,145,128,128);
 
 // 描画
 async function paint(imgfile) {
-  threshold = thrs[pos];
+  let threshold = thrs[pos];
   // 画像ロード
   let img = new Image();
   img.src = imgfile;
@@ -25,6 +25,7 @@ async function paint(imgfile) {
   }
 
 
+  
   cv.imshow('canvasOutput', dst);
 
   img.delete();
