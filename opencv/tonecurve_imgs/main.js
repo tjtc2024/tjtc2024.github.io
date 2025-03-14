@@ -3,7 +3,7 @@
 let imgElement = document.getElementById('imageSrc');
 
 let pos = 0;
-let pics = Array("./imgs/diamond_gs1.jpg", "./imgs/leo_gs1.jpg", "./imgs/uma_gs1.jpg", "./imgs/vir_gs1.jpg", "./imgs/cyg_gs1.jpg", "./imgs/sco_gs1.jpg");
+let pics = Array("./imgs/car_gs1.jpg", "./imgs/diamond_gs1.jpg", "./imgs/leo_gs1.jpg", "./imgs/uma_gs1.jpg", "./imgs/vir_gs1.jpg", "./imgs/cyg_gs1.jpg", "./imgs/sco_gs1.jpg");
 let thrs = Array(145,145,145,145,128,128);
 
 // 描画
