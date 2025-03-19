@@ -18,7 +18,7 @@ async function execSqlsJs(sqls) {
         while( stmt.step() ) {
             let row = stmt.getAsObject();
             let title = row.TITLE;
-            sql_result += "<p>" + title + "</p>";
+            sql_result += "<p><a href=\"./request.html?key=" + title + "\">" + title + "</a></p>";
         }
         stmt.free();
     });
