@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>豊明ジュニア天文クラブ オンライン観望会</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+        img {
+            width:50vw;
+            height:auto;
+        }
+    </style>
+    <script src="./lib/sql-wasm.js"></script>
+</head>
+<body>
+    <h1>オンライン観望会データベース</h1>
+    <p>
+    <div id="sql_result"></div>
+    <script src="./select_electron.js"></script>
+    <hr>
+    <a href="../start.html">戻る</a>
+</body>

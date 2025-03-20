@@ -19,6 +19,8 @@ const loadHtml = (jsonObj) => {
         for (let m = 0; m < lines.length; m++) {
             htmlBody += "<p>" + lines[m] + "</p>";
         }
+
+        htmlBody += "<br>";
     }
     div.innerHTML = htmlBody;
 } 
