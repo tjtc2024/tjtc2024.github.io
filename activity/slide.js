@@ -31,5 +31,3 @@ const loadObj =
         .catch((e) => {})
 
 
-// ここにファイル名を指定
-loadObj('slide.json');
