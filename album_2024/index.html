@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>豊明ジュニア天文クラブ オンライン観望会</title>
+    <title>豊明ジュニア天文クラブ 2024年度 活動記録</title>
     <style>
         body {
             background-color: #000000;
@@ -17,13 +18,14 @@
             height:auto;
         }
     </style>
-    <script src="./lib/sql-wasm.js"></script>
+    
 </head>
 <body>
-    <h1>オンライン観望会検索結果</h1>
-    <p id="key"></p>
-    <div id="sql_result"></div>
-    <script src="./request.js"></script>
+    <h2>豊明ジュニア天文クラブ 2024年度 活動記録</h2>
+    <div id="conv_json"></div>
+    <button id="next_page">次のページ</button>
+    <script src="./slide.js"></script>
+    <script src="./main.js"></script>
     <hr>
-    <a href="./list_electron.html">検索できる星座一覧</a>
 </body>
+</html>
