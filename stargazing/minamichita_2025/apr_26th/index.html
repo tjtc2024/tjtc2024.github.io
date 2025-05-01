@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>豊明ジュニア天文クラブ 観望会スケジュール</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .aspect-ratio-block {
+            background: #000000;
+            color: #ffffff;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+        }
+        img {
+            width:50vw;
+            height:auto;
+        }
+    </style>
+</head>
+<body>
+    <p>オンライン観望会 2025年4月(南知多)</p>
+    <p>ボタンを押すと画像が切り替わります</p>
+    <button onclick="nextPage()">次の画像</button><button onclick="prevPage()">前の画像</button><button onclick="resetPage()">最初から</button>
+    <p id="title">さそり座付近の天の川</p>
+    <p id="imgsrc"><img src="imgs/mw_sco1.jpg"></p>
+    <hr>
+    <a href="../index.html">戻る</a>
+    <script src="./pages.js" type="text/javascript"></script>
+</body>
+</html>
