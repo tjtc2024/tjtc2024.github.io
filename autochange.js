@@ -16,7 +16,9 @@ const loadPromise =
 
 
 const pages = [
+  "./master/diamond.json",
   "./master/ori.json",
+  "./master/vir.json",
   "./master/cyg.json",
   "./master/sco.json",
   "./master/and.json"

@@ -22,7 +22,7 @@ app.on('ready', function() {
     width: 800,
     height: 600
   });
-  mainWindow.loadURL('file://' + __dirname + '/album_2024/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/start.html');
 
   //ウィンドウが閉じられたらアプリも終了
   mainWindow.on('closed', function() {
