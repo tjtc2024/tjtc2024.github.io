@@ -34,12 +34,16 @@ src="./es5/tex-chtml.js"></script>
     \]
     重い星の周りでは、ピタゴラスの定理が成り立たないため、時空が歪んでいると考えられます。
     \[
-        (1 - \frac{2GM}{c^2 r})(c \delta t)^2 = (\delta x)^2 + (\delta y)^2
+        (1 - \frac{2GM}{c^2 r})(c \delta t)^2 = \frac{(\delta x)^2}{(1 - \frac{2GM}{c^2 r})} + (\delta y)^2
     \]
     <h2>重い星の中にある時間はゆっくり進む</h2>
     ブラックホールから離れる場合もピタゴラスの定理からある程度想像できます。
     \[
-        \delta t = \frac{\sqrt{(\delta x)^2 + (\delta y)^2 + (\delta z)^2}}{c(1 - \frac{2GM}{c^2 r})}
+        \delta t = \frac{\sqrt{\frac{(\delta x)^2}{(1 - \frac{2GM}{c^2 r})} + (\delta y)^2}}{c(1 - \frac{2GM}{c^2 r})}
+    \]
+    高校で習う極限の考え方を使うと
+    \[
+        \delta t \to \infty \quad (r \to \frac{2GM}{r} + 0)  
     \]
     <h2>シュバルツシルト半径</h2>
     光でも脱出できないブラックホールの範囲
