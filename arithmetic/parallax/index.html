@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>年周視差と恒星までの距離</title>
+<style>
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .aspect-ratio-block {
+        background: #000000;
+        color: #ffffff;
+        width: 100%;
+        aspect-ratio: 9 / 16;
+    }
+    img {
+        width:50vw;
+        height:auto;
+    }
+</style>
+</head>
+<body>
+    <h2>年周視差と恒星までの距離</h2>
+    <img src="./parallax.jpg">
+    <p><input type="number" id="parallax" step="0.00001" value="0.13"></p>
+    <button id="button1" onclick="buttonPushed1()">年周視差を ° に換算</button>
+    <p id="degree">年周視差(°)</p>
+    <button id="button2" onclick="buttonPushed2()">恒星までの距離を計算</button>
+    <p id="result_au">恒星までの距離(天文単位)</p>
+    <p id="result_ly">恒星までの距離(光年)</p>
+    <script src="./main.js"></script>
+    <hr>
+    <a href="../../information.html">戻る</a>
+</body>
+</html>
